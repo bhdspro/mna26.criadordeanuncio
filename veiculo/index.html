@@ -478,7 +478,7 @@
                 planRadios.forEach(r => { if(r.checked) selectedPlan = r.value; });
 
                 const pixString = generateDynamicPix(wp, selectedPlan);
-                const displayText = `CRIADOR DE ANÚNCIO VCL${selectedPlan === '5' ? '05' : '26'} - ${wp}`;
+                const displayText = `CRIADOR DE ANÚNCIO VCL${selectedPlan === 'A' ? 'LOGO' : 'ENDEREÇO'} - ${wp}`;
 
                 pixCopiaCola.value = pixString;
                 

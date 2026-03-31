@@ -1318,7 +1318,7 @@
                     if (uploadedImages.length === 1) {
                         const canvas = await createAdCanvas(uploadedImages[0]);
                         const link = document.createElement('a');
-                        link.download = 'anuncio-veiculo.png';
+                        link.download = 'criadordeanuncio.png';
                         link.href = canvas.toDataURL('image/png');
                         link.click();
                     } else {
@@ -1326,7 +1326,7 @@
                         for (let i = 0; i < uploadedImages.length; i++) {
                             const canvas = await createAdCanvas(uploadedImages[i]);
                             const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-                            zip.file(`anuncio-${i + 1}.png`, blob);
+                            zip.file(`image-${i + 1}.png`, blob);
                         }
                         const zipBlob = await zip.generateAsync({ type: 'blob' });
                         const link = document.createElement('a');

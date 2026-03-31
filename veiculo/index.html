@@ -413,8 +413,8 @@
             const planRadios = document.getElementsByName('pixPlan');
 
             function generateDynamicPix(whatsapp, plan) {
-                const amount = plan === '5' ? "1.98" : "1.98";
-                const descText = `CRIADOR DE ANUNCIO VCL${plan === '5' ? '05' : '26'} - ${whatsapp.replace(/\D/g, '')}`;
+                const amount = plan === '1' ? "1.98" : '2' ? "1.98";
+                const descText = `CRIADOR DE ANUNCIO ATL${plan === '1' ? '01' : '2' ? '02'} - ${whatsapp.replace(/\D/g, '')}`;
 
                 const f = (id, val) => id + ("00" + val.length).slice(-2) + val;
 

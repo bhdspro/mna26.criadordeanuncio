@@ -1326,7 +1326,7 @@
                         for (let i = 0; i < uploadedImages.length; i++) {
                             const canvas = await createAdCanvas(uploadedImages[i]);
                             const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-                            zip.file(`image${i + 1}.png`, blob);
+                            zip.file(`image0${i + 1}.png`, blob);
                         }
                         const zipBlob = await zip.generateAsync({ type: 'blob' });
                         const link = document.createElement('a');

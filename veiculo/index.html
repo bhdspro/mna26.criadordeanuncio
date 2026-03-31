@@ -275,16 +275,16 @@
                     <label class="block text-sm font-medium text-gray-300 mb-3">Escolha uma opção:</label>
                     <div class="space-y-3">
                         <label class="flex items-center p-3 bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-600 transition-colors border border-gray-600 has-[:checked]:border-red-500 has-[:checked]:bg-gray-700">
-                            <input type="radio" name="pixPlan" value="5" class="w-4 h-4 text-red-600 bg-gray-800 border-gray-500 focus:ring-red-500 focus:ring-2" checked>
+                            <input type="radio" name="pixPlan" value="A" class="w-4 h-4 text-red-600 bg-gray-800 border-gray-500 focus:ring-red-500 focus:ring-2" checked>
                             <div class="ml-3">
-                                <span class="block text-white font-medium">Atualizar a logo</span>
+                                <span class="block text-white font-medium">Alterar e atualizar logo</span>
                                 <span class="block text-sm text-gray-400">R$ 1,98</span>
                             </div>
                         </label>
                         <label class="flex items-center p-3 bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-600 transition-colors border border-gray-600 has-[:checked]:border-red-500 has-[:checked]:bg-gray-700">
-                            <input type="radio" name="pixPlan" value="26" class="w-4 h-4 text-red-600 bg-gray-800 border-gray-500 focus:ring-red-500 focus:ring-2">
+                            <input type="radio" name="pixPlan" value="B" class="w-4 h-4 text-red-600 bg-gray-800 border-gray-500 focus:ring-red-500 focus:ring-2">
                             <div class="ml-3">
-                                <span class="block text-white font-medium">Atualizar o endereço</span>
+                                <span class="block text-white font-medium">Alterar e atualizar endereço</span>
                                 <span class="block text-sm text-gray-400">R$ 1,98</span>
                             </div>
                         </label>
@@ -413,8 +413,8 @@
             const planRadios = document.getElementsByName('pixPlan');
 
             function generateDynamicPix(whatsapp, plan) {
-                const amount = plan === '1' ? "1.98" : '2' ? "1.98";
-                const descText = `CRIADOR DE ANUNCIO ATL${plan === '1' ? '01' : '2' ? '02'} - ${whatsapp.replace(/\D/g, '')}`;
+                const amount = plan === 'A' ? "0.98" : "0.98";
+                const descText = `CDA ATUALIZAR ${plan === 'A' ? 'LOGO' : 'ENDEREÇO'} - ${whatsapp.replace(/\D/g, '')}`;
 
                 const f = (id, val) => id + ("00" + val.length).slice(-2) + val;
 
